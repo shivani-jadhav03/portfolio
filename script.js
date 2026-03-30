@@ -371,33 +371,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // addParallaxEffect();
     
     // Initial animations (re-enabled for visibility but without scroll effects)
-    animateSkillBars();
-    animateCounters();
-    // revealOnScroll(); // Keep disabled to prevent scroll animations
-    
-    // Scroll event listeners (disabled to prevent scroll animations)
-    // window.addEventListener('scroll', () => {
-    //     animateSkillBars();
-    //     animateCounters();
-    //     revealOnScroll();
-    // });
-    
-    // Add hover effects to project cards
-    const projectCards = document.querySelectorAll('.project-card');
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-15px) scale(1.02)';
-        });
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0) scale(1)';
-        });
-    });
-});    
-            
-    // Add click effect to buttons (skip email links)
     const buttons = document.querySelectorAll('.btn:not([href^="mailto:"])');
     buttons.forEach(button => {
         button.addEventListener('click', function(e) {
+            addClickFeedback(this, 'medium');
+            
             const ripple = document.createElement('span');
             const rect = this.getBoundingClientRect();
             const size = Math.max(rect.width, rect.height);
@@ -423,12 +401,94 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
     
-    // Add CSS for ripple animation
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes ripple {
-            to {
-                transform: scale(4);
+    // Add haptic feedback to navigation links
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            triggerHaptic('light', 50);
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        });
+    });
+    
+    // Add haptic feedback to social links
+    const socialLinks = document.querySelectorAll('.social-link');
+    socialLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            triggerHaptic('medium', 30);
+        });
+    });
+    
+    // Add haptic feedback to cards
+    const cards = document.querySelectorAll('.project-card, .education-card, .achievement-card, .certificate-card, .language-card, .interest-card');
+    cards.forEach(card => {
+        card.addEventListener('click', function() {
+            triggerHaptic('light', 20);
+            addClickFeedback(this, 'light');
+        });
+    });
+    
+    // Add haptic feedback to skill categories
+    const skillCategories = document.querySelectorAll('.skill-category');
+    skillCategories.forEach(category => {
+        category.addEventListener('click', function() {
+            triggerHaptic('medium', 15);
+            addClickFeedback(this, 'light');
+        });
+    });
+    
+    // Add haptic feedback to highlight cards
+    const highlightCards = document.querySelectorAll('.highlight-card');
+    highlightCards.forEach(card => {
+        card.addEventListener('click', function() {
+            triggerHaptic('light', 25);
+            addClickFeedback(this, 'light');
+        });
+    });
+});
+
+// Function to add haptic feedback to all interactive elements
+function addHapticFeedbackToInteractiveElements() {
+    const interactiveElements = document.querySelectorAll('.interactive-element');
+    interactiveElements.forEach(element => {
+        element.addEventListener('click', function() {
+            triggerHaptic('medium', 10);
+        });
+    });
+}
+
+// Enhanced ripple effect with haptic feedback
+function createEnhancedRipple(element, event) {
+    const ripple = document.createElement('span');
+    const rect = element.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height) * 2;
+    const x = event.clientX - rect.left - size / 2;
+    const y = event.clientY - rect.top - size / 2;
+    
+    ripple.style.cssText = `
+        position: absolute;
+        width: ${size}px;
+        height: ${size}px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.6), rgba(79, 70, 229, 0.3));
+        transform: scale(0);
+        animation: enhancedRipple 0.8s ease-out;
+        pointer-events: none;
+        z-index: 1000;
+    `;
+    
+    element.appendChild(ripple);
+    
+    setTimeout(() => {
+        ripple.remove();
+    }, 800);
+}
+
+// Enhanced ripple animation keyframes
+const enhancedRippleKeyframes = `
+    @keyframes enhancedRipple {
+        0% {
+            transform: scale(0);
                 opacity: 0;
             }
         }

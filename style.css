@@ -76,62 +76,17 @@ body {
     position: relative;
 }
 
-.logo-text {
-    font-size: 1.8rem;
-    font-weight: 700;
-    background: var(--gradient-2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    font-family: 'Poppins', sans-serif;
-    letter-spacing: -0.5px;
-    position: relative;
-}
-
-.logo-dot {
-    width: 8px;
-    height: 8px;
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+.logo-image {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
-    position: relative;
-    animation: pulse-dot 2s infinite;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.2);
 }
 
-.logo-dot::before {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
-    border-radius: 50%;
-    opacity: 0.3;
-    animation: pulse-ring 2s infinite;
-}
-
-@keyframes pulse-dot {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.2);
-    }
-}
-
-@keyframes pulse-ring {
-    0% {
-        transform: scale(1);
-        opacity: 0.3;
-    }
-    50% {
-        transform: scale(1.3);
-        opacity: 0.1;
-    }
-    100% {
-        transform: scale(1.5);
-        opacity: 0;
-    }
+.logo-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(79, 70, 229, 0.3);
 }
 
 .nav-menu {
@@ -729,6 +684,26 @@ body {
     justify-content: flex-start;
     text-align: left;
     flex: 1;
+}
+
+.company-logo {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.company-logo-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.company-logo-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .project-content h3 {
@@ -1895,6 +1870,235 @@ section {
 .logo-design:hover .logo-text {
     transform: scale(1.1);
     color: var(--secondary-color);
+}
+
+/* Enhanced Scroll Animations */
+@keyframes floatAnimation {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes rotateIn {
+    from {
+        opacity: 0;
+        transform: rotate(-180deg) scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+
+/* Smooth Scroll Behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Parallax Background Effects */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, 
+        rgba(79, 70, 229, 0.03) 0%, 
+        rgba(124, 58, 237, 0.03) 50%, 
+        rgba(79, 70, 229, 0.03) 100%);
+    pointer-events: none;
+    z-index: -1;
+    animation: floatAnimation 20s ease-in-out infinite;
+}
+
+/* Enhanced Section Animations */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Card Hover Enhancements */
+.project-card:hover {
+    transform: translateY(-15px) scale(1.02) rotateX(5deg);
+    box-shadow: 0 20px 40px rgba(79, 70, 229, 0.15);
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}
+
+.education-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(79, 70, 229, 0.2);
+}
+
+.achievement-card:hover {
+    transform: translateY(-8px) rotateY(5deg) scale(1.02);
+    box-shadow: 0 12px 25px rgba(79, 70, 229, 0.15);
+}
+
+.certificate-card:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 15px 35px rgba(79, 70, 229, 0.2);
+}
+
+.language-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(79, 70, 229, 0.15);
+}
+
+.interest-card:hover {
+    transform: translateY(-5px) rotateZ(3deg) scale(1.02);
+    box-shadow: 0 8px 16px rgba(79, 70, 229, 0.15);
+}
+
+.skill-category:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(79, 70, 229, 0.2);
+}
+
+/* Enhanced Button Animations */
+.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(79, 70, 229, 0.3);
+}
+
+.btn:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+/* Navigation Enhancements */
+.nav-link:hover {
+    transform: translateY(-2px);
+    color: var(--secondary-color);
+}
+
+.nav-link::after {
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* Logo Enhanced Animation */
+.logo-design:hover .logo-image {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+/* Social Link Enhanced Animations */
+.social-link:hover {
+    transform: translateY(-3px) scale(1.1) rotate(10deg);
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.3);
+}
+
+/* Highlight Card Enhanced Hover */
+.highlight-card:hover {
+    transform: translateY(-5px) scale(1.08);
+    background: rgba(79, 70, 229, 0.15);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.25);
+}
+
+/* Text and Content Animations */
+p {
+    transition: all 0.3s ease;
+}
+
+p:hover {
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+/* Scroll Progress Indicator */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--gradient-2);
+    transition: width 0.3s ease;
+    z-index: 9999;
+}
+
+/* Image Hover Effects */
+img:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+/* Interactive Elements */
+.interactive-element {
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.interactive-element:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(79, 70, 229, 0.2);
+}
+
+/* Loading Animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+.loading-shimmer {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background-size: 1000px 100%;
+    animation: shimmer 2s infinite;
 }
 
 /* Footer Animation */
