@@ -14,7 +14,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h3>WELCOME</h3>
+                <div class="logo-design">
+                    <span class="logo-text">SJ</span>
+                    <div class="logo-dot"></div>
+                </div>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -53,7 +56,6 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1 class="hero-title">
-                        <span class="greeting">Hello, I'm</span>
                         <span class="name">Shivani Mahadev Jadhav</span>
                     </h1>
                     <h2 class="hero-subtitle">Student</h2>
@@ -65,6 +67,9 @@
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary">Get In Touch</a>
                         <a href="#projects" class="btn btn-secondary">View Projects</a>
+                        <a href="https://drive.google.com/file/d/1JyzOTVfJaup7iXNwMH-DZrgSnHAcaPRJ/view?usp=drive_link" download="Shivani_Jadhav_Resume.pdf" class="btn btn-resume">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
                     </div>
                     <div class="hero-social">
                         <a href="jadhavshivani41003@gmail.com" class="social-link" onclick="window.location.href='mailto:jadhavshivani41003@gmail.com'; return false;">
@@ -103,7 +108,7 @@
     <section id="about" class="about">
         <div class="container">
             <h2 class="section-title">About Me</h2>
-            <div class="about-content">
+            <div class="about-container">
                 <div class="about-text">
                     <p>
                         I am a final year engineering student with hands-on experience in Java, C, C++ and Python, and a strong 
@@ -116,33 +121,33 @@
                         about developing innovative solutions and gaining practical experience through internships and personal projects. 
                         My journey in engineering has been driven by curiosity and a constant desire to learn and grow.
                     </p>
-                    <div class="about-highlights">
-                        <div class="highlight-item">
+                </div>
+                <div class="about-highlights">
+                    <div class="highlights-grid">
+                        <div class="highlight-card">
                             <i class="fas fa-code"></i>
                             <span>Clean Code Enthusiast</span>
                         </div>
-                        <div class="highlight-item">
+                        <div class="highlight-card">
                             <i class="fas fa-lightbulb"></i>
                             <span>Problem Solver</span>
                         </div>
-                        <div class="highlight-item">
+                        <div class="highlight-card">
                             <i class="fas fa-users"></i>
                             <span>Team Player</span>
                         </div>
-                    </div>
-                </div>
-                <div class="about-highlights">
-                    <div class="highlight-item">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span>8.73 CGPA</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-trophy"></i>
-                        <span>4-Star Java</span>
-                    </div>
-                    <div class="highlight-item">
-                        <i class="fas fa-briefcase"></i>
-                        <span>2 Internships</span>
+                        <div class="highlight-card">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>8.73 CGPA</span>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-trophy"></i>
+                            <span>4-Star Java</span>
+                        </div>
+                        <div class="highlight-card">
+                            <i class="fas fa-briefcase"></i>
+                            <span>2 Internships</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -157,88 +162,34 @@
                 <div class="skill-category">
                     <h3>Programming Languages</h3>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Java</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">C</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">C++</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
+                        <ul>
+                            <li>Java</li>
+                            <li>Python</li>
+                            <li>C</li>
+                            <li>C++</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Technical Skills</h3>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Data Structures & Algorithms</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Operating Systems</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Object Oriented Programming</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Embedded Systems</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
+                        <ul>
+                            <li>Data Structures & Algorithms</li>
+                            <li>Operating Systems</li>
+                            <li>Object Oriented Programming</li>
+                            <li>Embedded Systems</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3>Web Development & Tools</h3>
                     <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">HTML/CSS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">JavaScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Git</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">PLC and Automation Tools</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>JavaScript</li>
+                            <li>Git</li>
+                            <li>PLC and Automation Tools</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -303,33 +254,40 @@
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">01/2025 - Present</div>
-                        <h3>Intern</h3>
-                        <h4>Suzlon Group, Pune</h4>
-                        <p>Currently interning at Suzlon, learning Java to contribute to project-based applications involving wind turbine data monitoring and management. Working on developing responsive authentication UI components using React, implementing form handling and state management while gaining hands-on experience in client-side validation and modern frontend development practices.</p>
+            <div class="experience-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Java Developer Intern</h3>
+                        <h4>Suzlon Group</h4>
+                        <div class="experience-date">01/2025 - Present</div>
+                        <p>Currently interning at Suzlon, contributing to wind turbine data monitoring and management applications using Java and React.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Data Monitoring</span>
+                            <span class="tech-tag">UI Development</span>
+                        </div>
                         <ul>
-                            <li>Java development for wind turbine data monitoring</li>
-                            <li>React UI component development</li>
-                            <li>Form handling and state management</li>
-                            <li>Client-side validation implementation</li>
+                            <li>Developing responsive authentication UI components</li>
+                            <li>Implementing form handling and state management</li>
+                            <li>Client-side validation and modern frontend practices</li>
                         </ul>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-date">07/2024 - 08/2024</div>
-                        <h3>Intern</h3>
-                        <h4>X-Trans Enterprises, Pune</h4>
-                        <p>15-day industrial internship at a transformer manufacturing company, gaining hands-on exposure to transformer assembly, testing procedures, and quality control processes.</p>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Industrial Intern</h3>
+                        <h4>X-Trans Enterprises</h4>
+                        <div class="experience-date">07/2024 - 08/2024</div>
+                        <p>15-day industrial internship at a transformer manufacturing company gaining hands-on exposure to industrial processes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Transformer Assembly</span>
+                            <span class="tech-tag">Quality Control</span>
+                            <span class="tech-tag">Manufacturing</span>
+                        </div>
                         <ul>
-                            <li>Transformer assembly experience</li>
-                            <li>Testing procedures knowledge</li>
-                            <li>Quality control processes</li>
+                            <li>Transformer assembly and testing experience</li>
+                            <li>Quality control processes implementation</li>
                             <li>Industrial manufacturing exposure</li>
                         </ul>
                     </div>
@@ -354,7 +312,6 @@
                         <p class="duration">11/2022 - 06/2026, Ashta, Sangli</p>
                         <div class="education-details">
                             <p>C.G.P.A: 8.73</p>
-                            <p>Relevant Coursework: Operating Systems, Data Structures, Algorithms, Software Engineering, Embedded Systems</p>
                         </div>
                     </div>
                 </div>
@@ -365,7 +322,7 @@
     <!-- Achievements Section -->
     <section class="achievements">
         <div class="container">
-            <h2 class="section-title">Achievements & Certifications</h2>
+            <h2 class="section-title">Awards</h2>
             <div class="achievements-grid">
                 <div class="achievement-card">
                     <div class="achievement-icon">
@@ -373,6 +330,7 @@
                     </div>
                     <h3>Runner-up – "Web Shaper"</h3>
                     <p>E-commerce Track, Lakshya'23, ADCET</p>
+                    
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-icon">
@@ -418,6 +376,9 @@
                     <h3>Java (Basic) Skill Certification</h3>
                     <p class="issuer">HackerRank</p>
                     <p class="date">01/2026</p>
+                    <a href="https://drive.google.com/file/d/1-bN85uIRdahDd4VJUbZ9X7lvIl4yrfY0/view?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer" aria-label="Open Java certificate in new tab">
+                    <i class="fas fa-external-link-alt"></i> View Certificate
+                </a>
                 </div>
                 <div class="certificate-card">
                     <div class="certificate-icon">
@@ -426,6 +387,9 @@
                     <h3>Effective Leadership</h3>
                     <p class="issuer">HP LIFE (HP Foundation)</p>
                     <p class="date">02/2026</p>
+                    <a href="https://drive.google.com/file/d/1T4bDGF_TvNiriYi9IjI4PlXemhMbzvMb/view?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer" aria-label="Open Effective Leadership certificate in new tab">
+                    <i class="fas fa-external-link-alt"></i> View Certificate
+                </a>
                 </div>
                 <div class="certificate-card">
                     <div class="certificate-icon">
@@ -434,6 +398,20 @@
                     <h3>Introduction to Prompt Engineering</h3>
                     <p class="issuer">Simplilearn SkillUp</p>
                     <p class="date">10/2025</p>
+                    <a href="https://drive.google.com/file/d/1BBlCh0UTYVj2GsaTayPTZ_SvPc5VrpDI/view?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer" aria-label="Open Prompt Engineering certificate in new tab">
+                    <i class="fas fa-external-link-alt"></i> View Certificate
+                </a>
+                </div>
+                <div class="certificate-card">
+                    <div class="certificate-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Indian Knowledge System</h3>
+                    <p class="issuer">SWAYAM (NPTEL)</p>
+                    <p class="date">12/2025</p>
+                    <a href="https://drive.google.com/file/d/1hYnoft-KXdKOE_iCVhvAa71CB7HybLPH/view?usp=drive_link" class="certificate-link" target="_blank" rel="noopener noreferrer" aria-label="Open Indian Knowledge System certificate in new tab">
+                    <i class="fas fa-external-link-alt"></i> View Certificate
+                </a>
                 </div>
             </div>
         </div>
@@ -563,22 +541,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                <div class="contact-buttons">
+                    <a href="https://linkedin.com/in/shivani-jadhav03" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-linkedin"></i> View LinkedIn
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=jadhavshivani41003@gmail.com" target="_blank" class="btn btn-secondary">
+                        <i class="fas fa-envelope"></i> Send Email
+                    </a>
                 </div>
             </div>
         </div>
@@ -588,7 +557,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2024 Shivani Jadhav. All rights reserved.</p>
+                <p>&copy; 2026 Shivani Jadhav. All rights reserved.</p>
                 <p>Designed with <i class="fas fa-heart"></i> by Shivani</p>
             </div>
         </div>

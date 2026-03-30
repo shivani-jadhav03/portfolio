@@ -370,17 +370,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add parallax effect (disabled to prevent unwanted animations)
     // addParallaxEffect();
     
-    // Initial animations
+    // Initial animations (re-enabled for visibility but without scroll effects)
     animateSkillBars();
     animateCounters();
-    revealOnScroll();
+    // revealOnScroll(); // Keep disabled to prevent scroll animations
     
-    // Scroll event listeners
-    window.addEventListener('scroll', () => {
-        animateSkillBars();
-        animateCounters();
-        revealOnScroll();
-    });
+    // Scroll event listeners (disabled to prevent scroll animations)
+    // window.addEventListener('scroll', () => {
+    //     animateSkillBars();
+    //     animateCounters();
+    //     revealOnScroll();
+    // });
     
     // Add hover effects to project cards
     const projectCards = document.querySelectorAll('.project-card');
@@ -388,14 +388,14 @@ document.addEventListener('DOMContentLoaded', () => {
         card.addEventListener('mouseenter', function() {
             this.style.transform = 'translateY(-15px) scale(1.02)';
         });
-        
         card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(-10px) scale(1)';
+            this.style.transform = 'translateY(0) scale(1)';
         });
     });
-    
-    // Add click effect to buttons
-    const buttons = document.querySelectorAll('.btn');
+});    
+            
+    // Add click effect to buttons (skip email links)
+    const buttons = document.querySelectorAll('.btn:not([href^="mailto:"])');
     buttons.forEach(button => {
         button.addEventListener('click', function(e) {
             const ripple = document.createElement('span');
@@ -410,14 +410,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 height: ${size}px;
                 border-radius: 50%;
                 background: rgba(255, 255, 255, 0.5);
-                left: ${x}px;
-                top: ${y}px;
+                transform: scale(0);
                 animation: ripple 0.6s ease-out;
                 pointer-events: none;
             `;
             
-            this.style.position = 'relative';
-            this.style.overflow = 'hidden';
             this.appendChild(ripple);
             
             setTimeout(() => {
@@ -526,7 +523,7 @@ function debounce(func, wait) {
     };
 }
 
-// Apply debouncing to scroll events
-window.addEventListener('scroll', debounce(() => {
-    // Scroll-based animations here
-}, 10));
+// Apply debouncing to scroll events (disabled to prevent scroll animations)
+// window.addEventListener('scroll', debounce(() => {
+//     // Scroll-based animations here
+// }, 10));
