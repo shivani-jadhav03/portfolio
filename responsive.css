@@ -55,6 +55,30 @@
     .skill-category {
         padding: 1.5rem;
     }
+    
+    /* HIGH PRIORITY MOBILE GRID FIXES - DESKTOP TABLET */
+    /* Force 2-column layout on desktop tablet for Awards, Interests, and Languages */
+    
+    .achievements-grid,
+    .interests-grid,
+    .languages-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 18px !important;
+        width: 100% !important;
+    }
+    
+    .achievement-card,
+    .interest-card,
+    .language-card {
+        width: auto !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        flex: 0 0 auto !important;
+        padding: 18px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
 }
 
 /* Tablet - 768px */
@@ -197,6 +221,30 @@
         padding: 1.5rem;
     }
     
+    /* HIGH PRIORITY MOBILE GRID FIXES - TABLET */
+    /* Force 2-column layout on tablet for Awards, Interests, and Languages */
+    
+    .achievements-grid,
+    .interests-grid,
+    .languages-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 15px !important;
+        width: 100% !important;
+    }
+    
+    .achievement-card,
+    .interest-card,
+    .language-card {
+        width: auto !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        flex: 0 0 auto !important;
+        padding: 15px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+    }
+    
     .skill-category {
         padding: 1.5rem;
     }
@@ -314,5 +362,29 @@
     .highlight-card {
         padding: 8px 10px;
         font-size: 11px;
+    }
+    
+    /* HIGH PRIORITY MOBILE GRID FIXES */
+    /* Force 2-column layout on mobile for Awards, Interests, and Languages */
+    
+    .achievements-grid,
+    .interests-grid,
+    .languages-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+    
+    .achievement-card,
+    .interest-card,
+    .language-card {
+        width: auto !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        flex: 0 0 auto !important;
+        padding: 12px !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
     }
 }

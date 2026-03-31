@@ -7,6 +7,7 @@
     <title>Shivani Jadhav - Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="experience-interactive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="logo.svg?v=2">
@@ -247,42 +248,90 @@
     <section id="experience" class="experience">
         <div class="container">
             <h2 class="section-title">Work Experience</h2>
-            <div class="experience-grid">
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><img src="suzlon.png" alt="Suzlon Group" class="company-logo-img"> Suzlon Group</h3>
-                        <h4>Java Developer Intern</h4>
-                        <div class="experience-date">01/2025 - Present</div>
-                        <p>Currently interning at Suzlon, contributing to wind turbine data monitoring and management applications using Java and React.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Data Monitoring</span>
-                            <span class="tech-tag">UI Development</span>
+            
+            <!-- Company Cards -->
+            <div class="company-cards-grid">
+                <div class="company-card" data-id="suzlon">
+                    <div class="company-card-content">
+                        <img src="suzlon.png" alt="Suzlon Group" class="company-logo-img">
+                        <div class="company-info">
+                            <h3>Suzlon Group</h3>
+                            <h4>Java Developer Intern</h4>
+                            <div class="experience-date">01/2025 - Present</div>
                         </div>
-                        <ul>
-                            <li>Developing responsive authentication UI components</li>
-                            <li>Implementing form handling and state management</li>
-                            <li>Client-side validation and modern frontend practices</li>
-                        </ul>
+                        <div class="card-arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-content">
-                        <h3><img src="xtrans.png" alt="X-Trans Enterprises" class="company-logo-img"> X-Trans Enterprises</h3>
-                        <h4>Industrial Intern</h4>
-                        <div class="experience-date">07/2024 - 08/2024</div>
-                        <p>15-day industrial internship at a transformer manufacturing company gaining hands-on exposure to industrial processes.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Transformer Assembly</span>
-                            <span class="tech-tag">Quality Control</span>
-                            <span class="tech-tag">Manufacturing</span>
+                
+                <div class="company-card" data-id="xtrans">
+                    <div class="company-card-content">
+                        <img src="xtrans.png" alt="X-Trans Enterprises" class="company-logo-img">
+                        <div class="company-info">
+                            <h3>X-Trans Enterprises</h3>
+                            <h4>Industrial Intern</h4>
+                            <div class="experience-date">07/2024 - 08/2024</div>
                         </div>
-                        <ul>
-                            <li>Transformer assembly and testing experience</li>
-                            <li>Quality control processes implementation</li>
-                            <li>Industrial manufacturing exposure</li>
-                        </ul>
+                        <div class="card-arrow">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Detailed Descriptions -->
+            <div class="experience-details">
+                <div class="experience-detail" id="suzlon-detail">
+                    <div class="detail-content">
+                        <div class="detail-header">
+                            <img src="suzlon.png" alt="Suzlon Group" class="detail-logo">
+                            <div class="detail-title">
+                                <h3>Java Developer Intern</h3>
+                                <h4>Suzlon Group</h4>
+                                <div class="experience-date">01/2025 - Present</div>
+                            </div>
+                        </div>
+                        <div class="detail-description">
+                            <p>Currently interning at Suzlon, contributing to wind turbine data monitoring and management applications using Java and React.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Java</span>
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Data Monitoring</span>
+                                <span class="tech-tag">UI Development</span>
+                            </div>
+                            <ul>
+                                <li>Developing responsive authentication UI components</li>
+                                <li>Implementing form handling and state management</li>
+                                <li>Client-side validation and modern frontend practices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="experience-detail" id="xtrans-detail">
+                    <div class="detail-content">
+                        <div class="detail-header">
+                            <img src="xtrans.png" alt="X-Trans Enterprises" class="detail-logo">
+                            <div class="detail-title">
+                                <h3>Industrial Intern</h3>
+                                <h4>X-Trans Enterprises</h4>
+                                <div class="experience-date">07/2024 - 08/2024</div>
+                            </div>
+                        </div>
+                        <div class="detail-description">
+                            <p>15-day industrial internship at a transformer manufacturing company gaining hands-on exposure to industrial processes.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Transformer Assembly</span>
+                                <span class="tech-tag">Quality Control</span>
+                                <span class="tech-tag">Manufacturing</span>
+                            </div>
+                            <ul>
+                                <li>Transformer assembly and testing experience</li>
+                                <li>Quality control processes implementation</li>
+                                <li>Industrial manufacturing exposure</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -557,5 +606,7 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="experience-interactive.js"></script>
+    <script src="mobile-nav.js"></script>
 </body>
 </html>
